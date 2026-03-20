@@ -206,12 +206,6 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-.departments.csv
-.diagnosis.csv
-.encounters.csv
-.patients.csv
-.providers.csv
-.social_determinants.csv
-.tigercensuscodes.csv
+2026-ASA-DataFest-Data-Files/
 
 .DS_Store
