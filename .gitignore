@@ -213,3 +213,5 @@ __marimo__/
 .providers.csv
 .social_determinants.csv
 .tigercensuscodes.csv
+
+.DS_Store
