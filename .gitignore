@@ -209,3 +209,5 @@ __marimo__/
 2026-ASA-DataFest-Data-Files/
 
 .DS_Store
+
+dataset.csv
