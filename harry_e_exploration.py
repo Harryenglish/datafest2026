@@ -6,6 +6,7 @@ encounters = pd.read_csv("2026-ASA-DataFest-Data-Files/encounters.csv")
 patients = pd.read_csv("2026-ASA-DataFest-Data-Files/patients.csv")
 social_determinants = pd.read_csv("2026-ASA-DataFest-Data-Files/social_determinants.csv", dtype={4: str})
 tigercensuscodes = pd.read_csv("2026-ASA-DataFest-Data-Files/tigercensuscodes.csv")
+tornados = pd.read_csv("dataset.csv")
 
 #print(providers.columns)
 #print(departments.columns)
