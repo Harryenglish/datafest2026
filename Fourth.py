@@ -37,7 +37,7 @@ def load_and_preprocess():
     # Load only necessary columns to save RAM
     diag = pd.read_csv('diagnosis.csv', usecols=['DiagnosisKey', 'GroupCode'], dtype=str)
     link = pd.read_csv('encounters.csv', usecols=['Date', 'DepartmentKey', 'PrimaryDiagnosisKey'], dtype=str)
-    dept = pd.read_csv('departments.csv', usecols=['DepartmentKey', 'city'], dtype=str)
+    dept = pd.read_csv('departments.csv', usecols=['DepartmentKey', 'City'], dtype=str)
 
     # Convert dates once
     link['Date'] = pd.to_datetime(link['Date'], errors='coerce', format='mixed')
@@ -49,7 +49,7 @@ def load_and_preprocess():
 
     # Merge and filter for our 10 cities
     df = link.merge(dept, on='DepartmentKey', how='inner')
-    df['city_clean'] = df['city'].astype(str).str.lower().str.strip()
+    df['city_clean'] = df['City'].astype(str).str.lower().str.strip()
     df = df[df['city_clean'].isin(KANSAS_GEO.keys())]
     
     df = df.merge(diag, left_on='PrimaryDiagnosisKey', right_on='DiagnosisKey', how='left')
